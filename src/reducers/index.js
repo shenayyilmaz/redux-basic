@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 export const songsReducer = () => {
   return [
     { title: "Title Soong 1", duration: "2:20" },
@@ -11,11 +13,16 @@ export const songsReducer = () => {
 
 // selectedSong = is current state
 
-export const SelecetSongReducer = (selectedSong = "null", action) => {
+export const selecetSongReducer = (selectedSong = "null", action) => {
   switch (action.type) {
     case "SONG_SELECTED":
       return action.payload;
     default:
-      return song;
+      return selectedSong;
   }
 };
+
+export default combineReducers({
+  songs: songsReducer,
+  selectedtSong: selecetSongReducer,
+});
