@@ -1,10 +1,11 @@
 import React from "react";
-import { Provider } from "react-redux";
+
+import SongList from "./SongList";
 
 const App = () => {
   return (
     <div>
-      <h1>appp</h1>
+      <SongList />
     </div>
   );
 };
